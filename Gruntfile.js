@@ -462,17 +462,6 @@ module.exports = function (grunt) {
         'watch'
     ]);
 
-    /*
-     Build tasken fungerar s� h�r:
-     devmode respektive prodmode k�rs separat som varsin grunt task, f�rst rensas dist katalogen,
-     sen annoteras angularFiler f�r att st�dja minifiering och konkateneras. Den minifierade
-     angularFilen skapas i prodMode tasken, medan i devMode tasken kopieras endast den ominifierade filen
-     till output-katalogen. Prodmode forst�tter sen att minifiera css:er och html, sist kopieras bilder etc.
-     Devmode tasken minifierar inte css/html.
-     Om man k�r denna task med parametern --mode==DEBUG s� skapas b�de devmode-filer och prod-filer, men man
-     kan sedan v�lja i m�lmilj�n vilken variant man vill k�ra. K�r man med parametern --mode=PROD s� skapas endast
-     prodfiler, dvs minifierade filer.
-     */
     grunt.registerTask('build', function (target) {
         var mode = grunt.option('mode');
         var prodMode = ['clean:dist', 'ngAnnotate', 'uglify:generated', 'cssmin', 'htmlmin', 'copy:main'];
