@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <main id="content" role="main" aria-labelledby="main-desc" tabindex="-1" style="margin-top:45px">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input class="form-control" id="subject"
+                                   placeholder="Enter a subject (computer science, history)" ng-model="dataModel.subject">
+                        </div>
+                        <div class="form-group" ng-show="showResults">
+                            <label for="courses">Available courses</label>
+                            <textarea class="form-control" id="courses"
+                                   ng-model="dataModel.courses">
+                            </textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-default" ng-click="validateForm()">Submit</button>
+                        <button class="btn btn-default" ng-click="reset()">Reset</button>
+                    </form>
+                </main>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+    </div>
+</div>
+
+

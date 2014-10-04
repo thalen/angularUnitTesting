@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Opkoko 14.2 Demoapp</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+</head>
+<body>
+<div id="opkoko-demo" ui-view></div>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jstorage/jstorage.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/ngstorage/ngStorage.js"></script>
+<script src="bower_components/angular-agility/dist/angular-agility.js"></script>
+<script src="bower_components/lodash/dist/lodash.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js"></script>
+
+<script src="js/app.js"></script>
+<script src="modules/start/startModule.js"></script>
+<script src="modules/start/controllers/startController.js"></script>
+
+<script>
+
+    angular.module('opkokoDemoApp');
+    //angular.module('skapa-matchningsprofil', ['skapaMatchningsprofilApp']);
+    angular.bootstrap(document.getElementById('opkoko-demo'), ['opkokoDemoApp']);
+
+
+</script>
+
+</body>
+</html>
