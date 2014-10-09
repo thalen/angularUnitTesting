@@ -4,7 +4,7 @@ angular.module('opkokoDemoApp', [
     'ngResource',
     'ui.router',
     'ngStorage',
-    //'unittestDemo.resources',
+    'unittestDemo.resources',
     'unittestDemo.start',
     'ui.bootstrap',
     'ngAnimate',

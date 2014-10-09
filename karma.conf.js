@@ -11,7 +11,23 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-
+            'app/bower_components/jquery/dist/jquery.js',
+            'app/bower_components/angular/angular.js',
+            'app/bower_components/jstorage/jstorage.js',
+            'app/bower_components/angular-mocks/angular-mocks.js',
+            'app/bower_components/angular-ui-router/release/angular-ui-router.js',
+            'app/bower_components/angular-resource/angular-resource.js',
+            'app/bower_components/ngstorage/ngStorage.js',
+            'app/bower_components/angular-agility/dist/angular-agility.js',
+            'app/bower_components/angular-strap/dist/angular-strap.js',
+            'app/bower_components/lodash/dist/lodash.underscore.js',
+            'app/bower_components/bootstrap/dist/js/bootstrap.js',
+            'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+            'app/bower_components/angular-animate/angular-animate.js',
+            'test/**/*.js',
+            'app/modules/start/startModule.js',
+            'app/modules/start/services/Services.js',
+            'app/modules/start/controllers/*.js'
         ],
 
         preprocessors : {

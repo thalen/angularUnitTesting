@@ -1,0 +1,12 @@
+[
+    {
+        "id":"1",
+        "name":"Linear algebra",
+        "subject":"Mathematics"
+    },
+    {
+        "id":"2",
+        "name":"Swedish",
+        "subject":"Languages"
+    }
+]

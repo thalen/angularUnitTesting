@@ -1,7 +1,7 @@
 'use strict';
 var module = angular.module('unittestDemo.start');
 
-module.controller('StartController', function ($scope, $log) {
+module.controller('StartController', function ($scope, $log, CoursesService) {
 
     $scope.dataModel = {
         subject: '',
@@ -9,7 +9,15 @@ module.controller('StartController', function ($scope, $log) {
     };
 
 
-    $scope.validateForm = function () {
+    $scope.fetchCourses = function () {
+
+        CoursesService.query().$promise.then(function (response) {
+            $scope.dataModel.courses = _.map( _.filter(response, function (elem) {
+                return elem.subject === $scope.dataModel.subject;
+            }), function (elem) {
+               return elem.name;
+            });
+        });
 
         $scope.dataModel.courses = 'Linear algebra\nJava programming';
         $scope.showResults = true;
