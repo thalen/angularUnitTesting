@@ -5,6 +5,7 @@ describe('controller: StartController', function() {
         CoursesService,
         mockResponse = [{id: 1, name: 'English', subject: 'Languages'}, {id: 2, name: 'Compiler construction', subject: 'Computer science'}];
 
+    beforeEach(module('unittestDemo'));
     beforeEach(module('unittestDemo.start'));
     beforeEach(module('unittestDemo.resources'));
 

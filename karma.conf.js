@@ -24,6 +24,7 @@ module.exports = function(config) {
             'app/bower_components/bootstrap/dist/js/bootstrap.js',
             'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
             'app/bower_components/angular-animate/angular-animate.js',
+            'test/AngularConstants.js',
             'test/**/*.js',
             'app/modules/start/startModule.js',
             'app/modules/start/services/Services.js',
