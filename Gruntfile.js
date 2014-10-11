@@ -269,6 +269,27 @@ module.exports = function (grunt) {
                         ]
                     }
                 ]
+            },
+            bower_components : {
+                files: [
+                    {
+                        src: [
+                            'app/bower_components/jquery/dist/jquery.js',
+                            'app/bower_components/angular/angular.js',
+                            'app/bower_components/jstorage/jstorage.js',
+                            'app/bower_components/angular-ui-router/release/angular-ui-router.js',
+                            'app/bower_components/angular-resource/angular-resource.js',
+                            'app/bower_components/ngstorage/ngStorage.js',
+                            'app/bower_components/angular-agility/dist/angular-agility.js',
+                            'app/bower_components/lodash/dist/lodash.js',
+                            'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+                            'app/bower_components/angular-animate/angular-animate.js',
+                            'app/bower_components/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js'
+                        ],
+                        dest: '<%= yeoman.dist %>/generic_components/bower_components.min.js'
+
+                    }
+                ]
             }
         },
         uglify: {
@@ -385,6 +406,15 @@ module.exports = function (grunt) {
                         filter: 'isFile',
                         flatten: true,
                         expand: true
+                    },
+                    {
+                        src: ['app/index_tmp.html'],
+                        dest: '<%= yeoman.dist %>/',
+                        flatten: true,
+                        expand: true,
+                        rename: function (dest, src) {
+                            return dest + 'index.html';
+                        }
                     }
                 ]
             },
@@ -464,7 +494,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', function (target) {
         var mode = grunt.option('mode');
-        var prodMode = ['clean:dist', 'ngAnnotate', 'uglify:generated', 'cssmin', 'htmlmin', 'copy:main'];
+        var prodMode = ['clean:dist', 'ngAnnotate', 'uglify:generated', 'cssmin', 'htmlmin', 'copy:main', 'concat:bower_components'];
         var devMode = ['clean:dist', 'ngAnnotate', 'copy:debug', 'concat:dist'];
         if (mode == 'DEBUG') {
             grunt.task.run(devMode);
