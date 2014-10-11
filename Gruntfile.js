@@ -356,19 +356,8 @@ module.exports = function (grunt) {
                     '.tmp/concat/js/angularMerge.js': [
                         'app/js/app.js',
                         'app/modules/start/startModule.js',
-                        'app/common/services/aflocalstorage.js',
-                        'app/common/services/matchningskriterierResources.js',
-                        'app/common/filters/kriterierFilter.js',
-                        'app/common/model/matchningsprofil.js',
-                        'app/common/factories/ifyllnadshjalp.js',
-                        'app/common/factories/hanteramatchning.js',
-                        'app/modules/start/controllers/startController.js',
-                        'app/modules/start/controllers/sokLaggTillController.js',
-                        'app/modules/start/controllers/forslagController.js',
-                        'app/modules/start/controllers/kompetenserController.js',
-                        'app/modules/start/controllers/flerInstallningarController.js',
-                        'app/modules/start/controllers/utbildningarOchKorkortController.js',
-                        'app/modules/start/controllers/lankarVidareController.js'
+                        'app/modules/start/services/Services.js',
+                        'app/modules/start/controllers/StartController.js'
                     ]
                 }
             }
@@ -394,17 +383,9 @@ module.exports = function (grunt) {
                         flatten: true
                     },
                     {
-                        src: ['app/application-manifest.json'],
+                        src: ['app/modules/start/testdata/Courses.json'],
                         dest: '<%= yeoman.dist %>',
                         filter: 'isFile',
-                        flatten: true,
-                        expand: true
-                    },
-                    {
-                        src: ['app/texter.json'],
-                        dest: '<%= yeoman.dist %>',
-                        filter: 'isFile',
-                        flatten: true,
                         expand: true
                     },
                     {
