@@ -39,7 +39,7 @@ describe('controller: StartController', function() {
             $rootScope.$apply();
             expect(CoursesService.query).toHaveBeenCalled();
             expect($scope.dataModel.courses).toEqual('English');
-            //comment
+            
         });
 
     });
