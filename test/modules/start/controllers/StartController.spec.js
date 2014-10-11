@@ -39,7 +39,7 @@ describe('controller: StartController', function() {
             $scope.fetchCourses();
             $rootScope.$apply();
             expect(CoursesService.query).toHaveBeenCalled();
-            expect($scope.dataModel.courses).toEqual('English');
+            expect($scope.dataModel.courses).toEqual('english');
 
         });
 
