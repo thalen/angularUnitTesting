@@ -3,12 +3,9 @@
 angular.module('opkokoDemoApp', [
     'ngResource',
     'ui.router',
-    'ngStorage',
     'unittestDemo.resources',
     'unittestDemo.start',
-    'ui.bootstrap',
-    'ngAnimate',
-    'angularjs-dropdown-multiselect'
+    'ui.bootstrap'
 ])
 
     .config(function myAppConfig() {

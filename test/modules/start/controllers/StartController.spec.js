@@ -37,7 +37,7 @@ describe('controller: StartController', function() {
         it('Given a subject, fetchCourses should filter the courses belonging to the same subject', function() {
             $scope.dataModel.subject = 'Languages';
             $scope.fetchCourses();
-            $rootScope.$apply();
+            $scope.$digest();
             expect(CoursesService.query).toHaveBeenCalled();
             expect($scope.dataModel.courses).toEqual('English');
 

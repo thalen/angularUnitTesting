@@ -276,15 +276,11 @@ module.exports = function (grunt) {
                         src: [
                             'app/bower_components/jquery/dist/jquery.js',
                             'app/bower_components/angular/angular.js',
-                            'app/bower_components/jstorage/jstorage.js',
                             'app/bower_components/angular-ui-router/release/angular-ui-router.js',
                             'app/bower_components/angular-resource/angular-resource.js',
-                            'app/bower_components/ngstorage/ngStorage.js',
                             'app/bower_components/angular-agility/dist/angular-agility.js',
                             'app/bower_components/lodash/dist/lodash.js',
-                            'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-                            'app/bower_components/angular-animate/angular-animate.js',
-                            'app/bower_components/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js'
+                            'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js'
                         ],
                         dest: '<%= yeoman.dist %>/generic_components/bower_components.min.js'
 

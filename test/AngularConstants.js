@@ -1,11 +1,9 @@
 angular.module('opkokoDemoApp', [
     'ngResource',
     'ui.router',
-    'ngStorage',
     'unittestDemo.resources',
     'unittestDemo.start',
-    'ui.bootstrap',
-    'ngAnimate'
+    'ui.bootstrap'
 ]);
 
 angular.module('opkokoDemoApp')
