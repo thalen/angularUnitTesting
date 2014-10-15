@@ -15,7 +15,7 @@ angular.module('unittestDemo.start')
             var filteredList = _.map( _.filter(response, function (elem) {
                 return elem.subject === $scope.dataModel.subject;
             }), function (elem) {
-               return elem.name;
+               return elem.name.toLowerCase();
             });
 
             $scope.dataModel.courses = filteredList.join('\n');
