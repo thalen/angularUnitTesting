@@ -274,13 +274,13 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: [
-                            'app/bower_components/jquery/dist/jquery.js',
-                            'app/bower_components/angular/angular.js',
-                            'app/bower_components/angular-ui-router/release/angular-ui-router.js',
-                            'app/bower_components/angular-resource/angular-resource.js',
-                            'app/bower_components/angular-agility/dist/angular-agility.js',
-                            'app/bower_components/lodash/dist/lodash.js',
-                            'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js'
+                            'app/bower_components/jquery/dist/jquery.min.js',
+                            'app/bower_components/angular/angular.min.js',
+                            'app/bower_components/angular-ui-router/release/angular-ui-router.min.js',
+                            'app/bower_components/angular-resource/angular-resource.min.js',
+                            'app/bower_components/angular-agility/dist/angular-agility.min.js',
+                            'app/bower_components/lodash/dist/lodash.min.js',
+                            'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'
                         ],
                         dest: '<%= yeoman.dist %>/generic_components/bower_components.min.js'
 
